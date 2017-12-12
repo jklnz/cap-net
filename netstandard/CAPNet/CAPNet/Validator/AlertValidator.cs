@@ -1,60 +1,33 @@
-﻿using CAPNet.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+using CAPNet.Models;
 
 namespace CAPNet
 {
     /// <summary>
-    ///
+    /// Validates an alert.
     /// </summary>
     public class AlertValidator
     {
-
         private readonly Alert alert;
 
         /// <summary>
-        ///
+        /// Initializes a new instance of the <see cref="AlertValidator"/> class.
         /// </summary>
-        public Alert Alert
-        {
-            get { return alert; }
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="alert"></param>
+        /// <param name="alert">The alert to validate.</param>
         public AlertValidator(Alert alert)
         {
             this.alert = alert;
         }
 
         /// <summary>
-        ///
+        /// Gets a value indicating whether the alert is valid.
         /// </summary>
-        public bool IsValid
-        {
-            get
-            {
-                return !Errors.Any();
-            }
-        }
+        public bool IsValid => !Errors.Any();
 
         /// <summary>
-        ///
+        /// Gets the list of validation errors.
         /// </summary>
-        public IEnumerable<Error> Errors => GetErrors(alert);
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="alert"></param>
-        /// <returns></returns>
-        private static IEnumerable<Error> GetErrors(Alert alert)
-        {
-            return alert.GetErrorsFromAllEntityValidators();
-        }
+        public IEnumerable<Error> Errors => alert.GetErrorsFromAllEntityValidators();
     }
 }
