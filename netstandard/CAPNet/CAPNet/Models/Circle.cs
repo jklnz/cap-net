@@ -16,7 +16,10 @@ namespace CAPNet.Models
         ///  in kilometers.</param>
         public Circle(string stringRepresentation)
         {
-            if (stringRepresentation == null) { throw new ArgumentNullException(nameof(stringRepresentation)); }
+            if (stringRepresentation == null)
+            {
+                throw new ArgumentNullException(nameof(stringRepresentation));
+            }
             var circleCenterAndRadius = stringRepresentation.Split(' ');
             Center = new Coordinate(circleCenterAndRadius[0]);
             Radius = decimal.Parse(circleCenterAndRadius[1], CultureInfo.InvariantCulture);

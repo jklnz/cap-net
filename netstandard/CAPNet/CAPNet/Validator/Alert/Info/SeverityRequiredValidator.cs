@@ -15,7 +15,9 @@ namespace CAPNet
         /// </summary>
         /// <param name="info"></param>
         public SeverityRequiredValidator(Info info)
-            : base(info) { }
+            : base(info)
+        {
+        }
 
         /// <summary>
         ///
@@ -36,7 +38,9 @@ namespace CAPNet
             get
             {
                 if (!IsValid)
-                     yield return new SeverityRequiredError();
+                {
+                    yield return new SeverityRequiredError();
+                }
             }
         }
     }

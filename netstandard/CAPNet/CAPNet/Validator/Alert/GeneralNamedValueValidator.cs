@@ -21,7 +21,9 @@ namespace CAPNet.Validator.Alert
         /// </summary>
         /// <param name="namedValue"></param>
         public GeneralNamedValueValidator(T namedValue)
-            : base(namedValue) { }
+            : base(namedValue)
+        {
+        }
 
         /// <summary>
         ///

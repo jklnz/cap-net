@@ -18,7 +18,9 @@ namespace CAPNet
         /// </summary>
         /// <param name="coordinate"></param>
         public Wgs84Validator(Coordinate coordinate)
-            : base(coordinate) { }
+            : base(coordinate)
+        {
+        }
 
         /// <summary>
         ///
@@ -28,7 +30,9 @@ namespace CAPNet
             get
             {
                 if (!IsValid)
+                {
                     yield return new Wgs84Error();
+                }
             }
         }
 

@@ -38,7 +38,10 @@ namespace CAPNet
         /// <returns></returns>
         public static XElement Create(Alert alert)
         {
-            if (alert == null) { throw new ArgumentNullException(nameof(alert)); }
+            if (alert == null)
+            {
+                throw new ArgumentNullException(nameof(alert));
+            }
 
             var alertElement = new XElement(Cap12Namespace + "alert");
 
@@ -67,7 +70,9 @@ namespace CAPNet
         private static DateTimeOffset? StripMiliseconds(DateTimeOffset? date)
         {
             if (date != null)
+            {
                 return date.Value.AddMilliseconds(-date.Value.Millisecond);
+            }
 
             return null;
         }
@@ -85,7 +90,10 @@ namespace CAPNet
         {
             var infoElement = new XElement(Cap12Namespace + "info");
             if (!info.Language.Equals(Info.DefaultLanguage, StringComparison.Ordinal))
+            {
                 infoElement.Add(new XElement(Cap12Namespace + "language", info.Language));
+            }
+
             infoElement.Add(info.Categories.Select(cat => new XElement(Cap12Namespace + "category", cat)));
             AddElementIfHasContent(infoElement, "event", info.Event);
             infoElement.Add(info.ResponseTypes.Select(res => new XElement(Cap12Namespace + "responseType", res)));
@@ -238,19 +246,25 @@ namespace CAPNet
             where T : class
         {
             if (content != null)
+            {
                 element.Add(new XElement(Cap12Namespace + name, content));
+            }
         }
 
         private static void AddElements(XElement parent, IEnumerable<XElement> elements)
         {
             foreach (XElement element in elements)
+            {
                 parent.Add(element);
+            }
         }
 
         private static void AddElementIfHasContent(XElement parent, string name, string content)
         {
             if (!string.IsNullOrEmpty(content))
+            {
                 parent.Add(new XElement(Cap12Namespace + name, content));
+            }
         }
     }
 }

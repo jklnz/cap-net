@@ -14,7 +14,9 @@ namespace CAPNet
         /// </summary>
         /// <param name="info"></param>
         public AreaValidator(Info info)
-            : base(info) { }
+            : base(info)
+        {
+        }
 
         /// <summary>
         ///
