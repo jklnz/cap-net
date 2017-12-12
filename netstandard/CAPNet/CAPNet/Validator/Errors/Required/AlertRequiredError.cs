@@ -1,9 +1,9 @@
 ﻿namespace CAPNet
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
-    public class AlertRequiredError: RequiredFieldError
+    public class AlertRequiredError : RequiredFieldError
     {
     }
 }

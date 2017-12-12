@@ -14,13 +14,13 @@ namespace CAPNet
         private const int maxLatitude = 90;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="coordinate"></param>
         public Wgs84Validator(Coordinate coordinate) : base(coordinate) { }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override IEnumerable<Error> Errors
         {
@@ -32,7 +32,7 @@ namespace CAPNet
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool IsValid
         {

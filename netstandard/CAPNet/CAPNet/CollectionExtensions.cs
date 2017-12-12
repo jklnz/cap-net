@@ -7,7 +7,7 @@ namespace CAPNet
     internal static class CollectionExtensions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="collection"></param>

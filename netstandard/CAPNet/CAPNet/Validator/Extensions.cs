@@ -11,7 +11,7 @@ namespace CAPNet
     public static class Extensions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>

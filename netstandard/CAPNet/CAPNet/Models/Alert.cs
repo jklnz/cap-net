@@ -9,7 +9,7 @@ namespace CAPNet.Models
     public class Alert
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Alert()
         {
@@ -21,7 +21,7 @@ namespace CAPNet.Models
         }
 
         /// <summary>
-        /// The identifier of the alert message 
+        /// The identifier of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -78,7 +78,7 @@ namespace CAPNet.Models
         public DateTimeOffset? Sent { get; set; }
 
         /// <summary>
-        /// The code denoting the appropriate handling of the alert message 
+        /// The code denoting the appropriate handling of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -97,7 +97,7 @@ namespace CAPNet.Models
         public Status Status { get; set; }
 
         /// <summary>
-        /// The code denoting the nature of the alert message 
+        /// The code denoting the nature of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -116,7 +116,7 @@ namespace CAPNet.Models
         public MessageType MessageType { get; set; }
 
         /// <summary>
-        /// The text identifying the source of the alert message 
+        /// The text identifying the source of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -127,7 +127,7 @@ namespace CAPNet.Models
         ///     </item>
         ///     <item>
         ///       <description>
-        ///          If not present, an implicit default value of "en-US" SHALL be assumed. 
+        ///          If not present, an implicit default value of "en-US" SHALL be assumed.
         ///       </description>
         ///     </item>
         ///     <item>
@@ -140,7 +140,7 @@ namespace CAPNet.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// The code denoting the intended distribution of the alert message 
+        /// The code denoting the intended distribution of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -157,12 +157,12 @@ namespace CAPNet.Models
         public Scope Scope { get; set; }
 
         /// <summary>
-        /// The text describing the rule for limiting distribution of the restricted alert message 
+        /// The text describing the rule for limiting distribution of the restricted alert message
         /// </summary>
         public string Restriction { get; set; }
 
         /// <summary>
-        /// The group listing of intended recipients of the alert message 
+        /// The group listing of intended recipients of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -192,7 +192,7 @@ namespace CAPNet.Models
         }
 
         /// <summary>
-        /// The code denoting the special handling of the alert message 
+        /// The code denoting the special handling of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -211,7 +211,7 @@ namespace CAPNet.Models
         public ICollection<string> Codes { get; }
 
         /// <summary>
-        /// The text describing the purpose or significance of the alert message 
+        /// The text describing the purpose or significance of the alert message
         /// </summary>
         /// <remarks>
         ///   <item>
@@ -223,7 +223,7 @@ namespace CAPNet.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// The group listing identifying earlier message(s) referenced by the alert message 
+        /// The group listing identifying earlier message(s) referenced by the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -248,7 +248,7 @@ namespace CAPNet.Models
         }
 
         /// <summary>
-        /// The group listing naming the referent incident(s) of the alert message 
+        /// The group listing naming the referent incident(s) of the alert message
         /// </summary>
         /// <remarks>
         ///   <list type="number">
@@ -285,7 +285,7 @@ namespace CAPNet.Models
         ///     <item>
         ///       <description>
         ///          Multiple occurrences are permitted within a single &lt;alert>.
-        ///          If targeting of multiple &lt;info> blocks in the same language overlaps, information in later blocks may expand but may not override the corresponding values in earlier ones. 
+        ///          If targeting of multiple &lt;info> blocks in the same language overlaps, information in later blocks may expand but may not override the corresponding values in earlier ones.
         ///          Each set of &lt;info> blocks containing the same language identifier SHALL be treated as a separate sequence.
         ///       </description>
         ///     </item>
