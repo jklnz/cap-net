@@ -4,10 +4,7 @@ using System.Linq;
 
 namespace CAPNet
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public static class CollectionExtensions
+    internal static class CollectionExtensions
     {
         /// <summary>
         /// 

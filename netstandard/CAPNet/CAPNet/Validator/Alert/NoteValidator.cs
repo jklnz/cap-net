@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace CAPNet
 {
     /// <summary>
-    ///The message note is primarily intended for use with status “Exercise” and msgType “Error”
+    /// The message note is primarily intended for use with status “Exercise” and msgType “Error”
     /// </summary>
     public class NoteValidator : Validator<Alert>
     {
