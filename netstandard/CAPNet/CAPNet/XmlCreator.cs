@@ -31,6 +31,7 @@ namespace CAPNet
             return from alert in alerts
                    select Create(alert);
         }
+
         /// <summary>
         ///
         /// </summary>
@@ -207,7 +208,6 @@ namespace CAPNet
             return from polygon in polygons
                    select new XElement(
                        Cap12Namespace + "polygon", polygon);
-
         }
 
         private static IEnumerable<XElement> Create(IEnumerable<Circle> circles)
@@ -215,7 +215,6 @@ namespace CAPNet
             return from circle in circles
                    select new XElement(
                        Cap12Namespace + "circle", circle);
-
         }
 
         private static void AddElementIfHasContent(XElement parent, string name, byte[] content)

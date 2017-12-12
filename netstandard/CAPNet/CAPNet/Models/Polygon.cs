@@ -16,7 +16,6 @@ namespace CAPNet.Models
         /// </summary>
         public IEnumerable<Coordinate> Coordinates => coordinates;
 
-
         /// <summary>
         ///
         /// </summary>
@@ -27,6 +26,7 @@ namespace CAPNet.Models
             {
                 throw new ArgumentNullException(nameof(stringRepresentation));
             }
+
             var stringCoordinates = stringRepresentation.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             coordinates = (from coordinate in stringCoordinates

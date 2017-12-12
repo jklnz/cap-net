@@ -20,6 +20,7 @@ namespace CAPNet.Models
             {
                 throw new ArgumentNullException(nameof(stringRepresentation));
             }
+
             var circleCenterAndRadius = stringRepresentation.Split(' ');
             Center = new Coordinate(circleCenterAndRadius[0]);
             Radius = decimal.Parse(circleCenterAndRadius[1], CultureInfo.InvariantCulture);
@@ -54,6 +55,5 @@ namespace CAPNet.Models
         {
             return string.Format(CultureInfo.InvariantCulture, "{0} {1}", Center, Radius);
         }
-
     }
 }

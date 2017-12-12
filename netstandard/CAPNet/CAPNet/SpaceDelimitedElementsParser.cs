@@ -14,6 +14,7 @@ namespace CAPNet
             IN_SPACE_CONTAINING_ELEMENTS = 1,
             IN_ELEMENTS_WITH_NO_SPACE = 2
         }
+
         private static States currentState;
         private static StringBuilder partialElement;
         private static int currentPosition;
@@ -91,7 +92,6 @@ namespace CAPNet
                 partialElement.Clear();
                 currentState = States.BETWEEN_ELEMENTS;
             }
-
         }
 
         private static void BetweenElementsState(char currentChar)
@@ -131,5 +131,4 @@ namespace CAPNet
             return tested.IsElementCharacter() || tested.IsSpace();
         }
     }
-
 }

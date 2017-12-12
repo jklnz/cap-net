@@ -18,6 +18,7 @@ namespace CAPNet
             {
                 throw new ArgumentNullException(nameof(collection));
             }
+
             if (newItems == null)
             {
                 throw new ArgumentNullException(nameof(newItems));

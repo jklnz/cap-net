@@ -384,7 +384,6 @@ namespace CAPNet
             //    <derefUri>derefUri</derefUri>
             //    <digest>digest</digest>
             // </resource>
-
             var resourceDescNode = resourceElement.Element(capNamespace + "resourceDesc");
             if (resourceDescNode != null)
             {
@@ -459,8 +458,6 @@ namespace CAPNet
             {
                 return false;
             }
-
         }
-
     }
 }
