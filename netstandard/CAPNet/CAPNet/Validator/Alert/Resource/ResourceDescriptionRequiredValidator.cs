@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CAPNet.Models;
 
 namespace CAPNet
 {
     /// <summary>
-    /// Scope is always required and must have certain values !
+    /// The text describing the type and content of the resource file is Required!
     /// </summary>
-    public class ScopeRequiredValidator : Validator<Alert>
+    public class ResourceDescriptionRequiredValidator : Validator<Resource>
     {
         /// <summary>
         ///
         /// </summary>
-        /// <param name="alert"></param>
-        public ScopeRequiredValidator(Alert alert)
-            : base(alert)
+        /// <param name="resource"></param>
+        public ResourceDescriptionRequiredValidator(Resource resource)
+            : base(resource)
         {
         }
 
@@ -27,7 +26,7 @@ namespace CAPNet
             {
                 if (!IsValid)
                 {
-                    yield return new ScopeRequiredError();
+                    yield return new ResourceDescriptionRequiredError();
                 }
             }
         }
@@ -39,7 +38,7 @@ namespace CAPNet
         {
             get
             {
-                return Enum.IsDefined(typeof(Scope), Entity.Scope);
+                return !string.IsNullOrEmpty(Entity.Description);
             }
         }
     }

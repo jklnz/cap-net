@@ -9,7 +9,7 @@ namespace CAPNet.Models
     public class Alert
     {
         /// <summary>
-        ///
+        /// Initializes a new instance of the <see cref="Alert"/> class.
         /// </summary>
         public Alert()
         {
